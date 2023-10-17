@@ -19,3 +19,6 @@ La pagina la hicimos para que sea intuitiva para el usuario y no tenga complicac
 
 ## Autores
 
+- Kevin Madrid
+- Axel Chavarría
+- Javier Escobar 
