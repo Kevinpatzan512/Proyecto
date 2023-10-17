@@ -22,3 +22,6 @@ La pagina la hicimos para que sea intuitiva para el usuario y no tenga complicac
 - Kevin Madrid
 - Axel Chavarría
 - Javier Escobar 
+
+## Licencias
+
