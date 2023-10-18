@@ -25,3 +25,4 @@ La pagina la hicimos para que sea intuitiva para el usuario y no tenga complicac
 
 ## Licencias
 
+La pagina es de código abierto con licencia [MIT](https://opensource.org/licenses/MIT). 
