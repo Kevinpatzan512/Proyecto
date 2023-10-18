@@ -4,7 +4,7 @@
 
 ## Acerca del proyecto
 
-El proyecto es una pagina web para poder gestionar las quinielas deportivas de diferentes tipos de deportes, la pagina esta desarrollada con lo que es el lenguaje de JavaScript, HTML y el framework de bootstrap para estilos y utilizando el framework de "". Algunas de las funciones que tiene la pagina son:
+El proyecto es una pagina web para poder gestionar las quinielas deportivas de diferentes tipos de deportes, la pagina esta desarrollada con lo que es el lenguaje de JavaScript, HTML y el framework de bootstrap para estilos y utilizando el framework de React.js . Algunas de las funciones que tiene la pagina son:
 
 - Ver los torneos deportivos.
 - Agregar un torneo.
