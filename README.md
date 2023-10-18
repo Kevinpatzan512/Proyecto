@@ -15,11 +15,10 @@ El proyecto es una pagina web para poder gestionar las quinielas deportivas de d
 
 ## Utilizacion del Proyecto
 
-La pagina la hicimos para que sea intuitiva para el usuario y no tenga complicaciones al momento de utilizar alguna de sus funciones o al momento de entrar a la pagina.
+La pagina es para hacer apuestas deportivas, uya base se es pronosticar que sucederá en diferentes torneos deportivos en un mismo día.
+## Autores 
 
-## Autores
-
-- Kevin Madrid
+- Kevin Madrid  
 - Axel Chavarría
 - Javier Escobar 
 
