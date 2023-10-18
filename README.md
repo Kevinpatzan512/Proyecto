@@ -2,9 +2,9 @@
  
 <https://trello.com/invite/b/m6nS12zk/ATTIca887ba13502154fbdc05daa689f17d8CCB2FF90/proyecto>
 
-## Acerca del proyecto
+## Pagina de Quinielas Deportivas
 
-El proyecto es una pagina web para poder gestionar las quinielas deportivas de diferentes tipos de deportes, la pagina esta desarrollada con lo que es el lenguaje de JavaScript, HTML y el framework de bootstrap para estilos y utilizando el framework de "". Algunas de las funciones que tiene la pagina son:
+El proyecto es una pagina web para poder gestionar las quinielas deportivas de diferentes tipos de deportes, la pagina esta desarrollada con lo que es el lenguaje de JavaScript, HTML y el framework de bootstrap para estilos y utilizando el framework de React.js. Algunas de las funciones que tiene la pagina son:
 
 - Ver los torneos deportivos.
 - Agregar un torneo.
@@ -13,9 +13,11 @@ El proyecto es una pagina web para poder gestionar las quinielas deportivas de d
 - Iniciar sesion
 - Crear sesion
 
-## Utilizacion del Proyecto
+Entre muchas más funciones.
 
-La pagina la hicimos para que sea intuitiva para el usuario y no tenga complicaciones al momento de utilizar alguna de sus funciones o al momento de entrar a la pagina.
+## Utilizacion de la pagina de Quinielas Deportivas.
+
+La pagina es para hacer apuestas deportivas, uya base se es pronosticar que sucedera en diferentes torneos deportivos en un mismo dia.
 
 ## Autores
 
@@ -25,3 +27,4 @@ La pagina la hicimos para que sea intuitiva para el usuario y no tenga complicac
 
 ## Licencias
 
+La pagina es de codigo abierto con la licencia [MIT](https://opensource.org/licenses/MIT).
