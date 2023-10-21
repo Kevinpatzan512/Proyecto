@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.barraNav {
+  background-color: 	#99a5b1;
+  width: 100%;
+}
+.letraNav {
+  font-weight: bold;
+  padding: 8px;
+}
+.cuerpoTitle {
+  text-align: center;
+  padding: 8px;
+  margin-top: 50px;
+  font-size: 60px;
+  color: white;
+}
+.textoBienvenido {
+  text-align: center;
+  padding: 5px;
+  font-size: 22px;
+  color: white;
+}
+.botonCuerpo {
+  margin: 8px;
+  font-size: 20px;
+}
+.botones {
+  text-align: center;
+}
+.videoFondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 80%;
+}
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grupoCards {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.cardTorneo {
+  margin: 8px;
+  text-align: center;
+}
+.imgTorneo {
+  height: 250px;
+}
+.imgNav {
+  margin: 8px;
+}
+.pageTitle {
+  color: black;
+  text-align: center;
+  padding: 8px;
+  margin-top: 50px;
+  font-size: 60px;
+}
+.pageText {
+  text-align: center;
+  padding: 5px;
+  font-size: 22px;
+}
+.pageSubtitle {
+  color: black;
+  text-align: center;
+  padding: 8px;
+  margin-top: 30px;
+  font-size: 40px;
+}
+.regisTorneo {
+  margin-bottom: 50px;
+}
+.escudosImg {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+.logoLiga {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+}
+.nameLiga {
+  margin-top: 20px;
+}
+.containerLiga {
+  width: 51%;
+  float: left;
+}
+.grupoDevs {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.cardApuesta {
+  width: 100%;
+}
+.formLogin {
+  margin: 20px;
+}
+.inputLogin {
+  margin: 20px;
+}
+.btnLogin {
+  margin: 15px;
+}
+.imgLogin {
+  display: block;
+  margin: 0 auto;
+}
+.imgBtn {
+  margin-right: 8px;
+}
+.bgLogin {
+  background-color: white;
+  margin: 30px;
+  padding: 80px;
+}
+.matchBox {
+  margin: 20px;
+}
+.btnGuardar {
+  margin: 20px;
+}
+.error {
+  color: red;
+}
+.resultSelect {
+  margin: 8px;
+  color: green;
+  font-weight: bold;
+}
+.boxResults {
+  margin: 32px;
+}
+.predicBox {
+  margin: 24px;
+}
