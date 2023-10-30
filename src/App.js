@@ -17,9 +17,10 @@ import PredicPremier from "./components/predicPremier";
 import PredicLaliga from "./components/predicLaliga";
 import PredicSeriea from "./components/predicSeriea";
 import PredicNBA from "./components/predicNBA";
+import PageMisTorneos from "./components/PageMisTorneos";
+
 
 function App() {
-  const [predicciones, setPredicciones] = useState([]);
   return (
     <div className="App">
       <Router>
@@ -30,11 +31,9 @@ function App() {
           <Route path="/pageTorneos" Component={PaginaTorneos}></Route>
           <Route path="/pagePartidos" Component={PaginaPartidos}></Route>
           <Route path="/pageApuesta" Component={PaginaApuesta}></Route>
+          <Route path="/PageMisTorneos" Component={PageMisTorneos}></Route>
           <Route path="/pageLogin" Component={PaginaLogin}></Route>
-          <Route
-            path="/pageRegistrarTorneos"
-            Component={PaginaRegistrarTorneos}
-          ></Route>
+          <Route path="/pageRegistrarTorneos" Component={PaginaRegistrarTorneos}></Route>
         </Routes>
         <Routes>
           <Route path="/partidosPremier" Component={PartidosPremier}></Route>

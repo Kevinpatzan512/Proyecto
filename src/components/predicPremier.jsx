@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
+import axios from "axios";
 
-
-function PredicPremier({ guardarPredicciones }) {
+function PredicPremier() {
   const [resultados, setResultados] = useState({});
   const [error, setError] = useState("");
   const [predicciones, setPredicciones] = useState([]);
@@ -90,6 +90,33 @@ function PredicPremier({ guardarPredicciones }) {
       [partidoId]: resultado,
     });
     setSeleccionActual({ ...seleccionActual, [partidoId]: resultado });
+  };
+
+  const guardarPrediccionEnAPI = () => {
+    const prediccionesParaEnviar = partidos.map((partido) => {
+      return {
+        torneo: "Premier League",
+        equipoLocal: partido.local,
+        equipoVisitante: partido.visitante,
+        resultado: resultados[partido.id] || "Sin selección",
+      };
+    });
+  
+    axios
+      .post(
+        "http://localhost:5000/api/registrar-prediccion",
+        prediccionesParaEnviar
+      )
+      .then((response) => {
+        if (response.status === 201) {
+          console.log("Predicciones guardadas correctamente en la API");
+        } else {
+          console.error("Error al guardar las predicciones en la API");
+        }
+      })
+      .catch((error) => {
+        console.error("Error al realizar la solicitud POST:", error);
+      });
   };
 
   const guardarResultados = () => {
@@ -201,6 +228,7 @@ function PredicPremier({ guardarPredicciones }) {
             <Link
               onClick={() => {
                 guardarResultados();
+                guardarPrediccionEnAPI();
                 nuevaPrediccion();
               }}
               className="btn btn-primary btnLogin"
@@ -215,7 +243,6 @@ function PredicPremier({ guardarPredicciones }) {
             >
               Mostrar Resultados
             </Link>
-
           </div>
         </div>
         {mostrarResultados && predicciones.length > 0 && (

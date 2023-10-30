@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import axios from "axios"; 
 import { VideoFondo } from "./fondo";
 import Cant4Partidos from "./cant4Partidos";
 import Cant8Partidos from "./cant8Partidos";
@@ -19,6 +20,7 @@ const PaginaRegistrarTorneos = () => {
   const [torneos, setTorneos] = useState([]);
   const [haRegistradoTorneo, setHaRegistradoTorneo] = useState(false);
   const [mostrarTorneo, setMostrarTorneo] = useState(false);
+  const [nextTorneoId, setNextTorneoId] = useState(1);
 
   const handleCantidadPartidosChange = (event) => {
     setCantidadPartidos(event.target.value);
@@ -28,7 +30,7 @@ const PaginaRegistrarTorneos = () => {
     setNombreTorneo(event.target.value);
   };
 
-  const handleRegistrarClick = () => {
+  const handleRegistrarClick = async () => {
     if (nombreTorneo.length < 4) {
       setErrorNombre("El nombre del torneo debe tener al menos 4 caracteres.");
       return;
@@ -63,20 +65,41 @@ const PaginaRegistrarTorneos = () => {
             id: `match${i}`,
             local: localInput.value,
             visitante: visitanteInput.value,
-            torneo: nombreTorneo,
           });
         }
       }
 
-      setPartidos(newPartidos);
-      setErrorPartidos("");
-      console.log(newPartidos);
-      setTorneos([...torneos, { nombre: nombreTorneo, partidos: newPartidos }]);
-      setHaRegistradoTorneo(true);
-      formRef.current.reset();
-      setMostrarTorneo(false);
+      const torneoData = {
+        id: nextTorneoId,
+        nombre: nombreTorneo,
+        partidos: newPartidos,
+      };
+
+      setNextTorneoId(nextTorneoId + 1);
+
+
+      axios
+        .post("http://localhost:5000/api/registrar-torneo", torneoData)
+        .then((response) => {
+          if (response.status === 201) {
+            setPartidos(newPartidos);
+            setErrorPartidos("");
+            console.log(newPartidos);
+            setTorneos([...torneos, torneoData]);
+            setHaRegistradoTorneo(true);
+            formRef.current.reset();
+            setMostrarTorneo(false);
+          } else {
+            const errorData = response.data;
+            setErrorPartidos(errorData.error);
+          }
+        })
+        .catch((error) => {
+          console.error("Error al enviar datos al servidor", error);
+        });
     }
   };
+
   const handleMostrarTorneoClick = () => {
     if (torneos.length > 0) {
       setMostrarTorneo(!mostrarTorneo);
@@ -91,7 +114,7 @@ const PaginaRegistrarTorneos = () => {
       <Container>
         <Row>
           <Col></Col>
-          <Col xs={6}>
+          <Col xs={8}>
             <div className="formLogin bgLogin">
               <fieldset>
                 <img
@@ -179,4 +202,5 @@ const PaginaRegistrarTorneos = () => {
     </>
   );
 };
+
 export default PaginaRegistrarTorneos;

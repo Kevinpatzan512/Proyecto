@@ -35,6 +35,10 @@ const BarraNav = () => {
             <img src="/img/apuesta.png" width={30} height={30} className="imgNav"/>
               Mis Predicciones
             </Link>
+            <Link className="nav-link" to="/PageMisTorneos">
+            <img src="/img/torneos.png" width={30} height={30} className="imgNav"/>
+              Mis Torneos
+            </Link>
             <Link className="nav-link" to="/pageLogin">
             <img src="/img/user.png" width={30} height={30} className="imgNav"/>
               Registrarse

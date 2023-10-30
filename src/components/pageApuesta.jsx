@@ -1,28 +1,59 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "./index.css";
 
-const PaginaApuesta = ({ predicciones }) => {
-  if (!predicciones) {
-    return <div>No hay predicciones guardadas.</div>;
-  }
+const PaginaApuesta = () => {
+  const [predicciones, setPredicciones] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/predicciones")
+      .then((response) => {
+        if (response.status === 200) {
+          setPredicciones(response.data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error al obtener las predicciones:", error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    <div>
-      <h1>Predicciones Guardadas</h1>
-      <ul>
-        {predicciones.map((prediccion, index) => (
-          <li key={index}>
-            Predicción {index + 1}:
+    <div className="text-center">
+      <h1 className="pageSubtitle">Predicciones Guardadas</h1>
+      {loading ? (
+        <p>Cargando predicciones...</p>
+      ) : (
+        <div>
+          {predicciones.length > 0 ? (
             <ul>
-              {prediccion.map((resultado, rIndex) => (
-                <li key={rIndex}>
-                  {resultado.local} vs {resultado.visitante} - Resultado:{" "}
-                  {resultado.resultado}
-                </li>
+              {predicciones.map((prediccion, index) => (
+                <div key={index} className="predicBox">
+                  <h3>Predicción {index + 1}</h3>
+                  {prediccion.map((resultado, rIndex) => (
+                    <div key={rIndex}>
+                      <p>
+                        {resultado.equipoLocal} vs {resultado.equipoVisitante}
+                      </p>
+                      <p className="resultSelect">
+                        Resultado: {resultado.resultado}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               ))}
             </ul>
-          </li>
-        ))}
-      </ul>
+          ) : (
+            <p>No hay predicciones disponibles.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 };
+
 export default PaginaApuesta;
