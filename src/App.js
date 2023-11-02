@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {gapi} from 'gapi-script'
 import BarraNav from "./components/barraNav";
 import PaginaApuesta from "./components/pageApuesta";
 import PaginaPartidos from "./components/pagePartidos";
@@ -20,13 +21,26 @@ import PredicNBA from "./components/predicNBA";
 import PageMisTorneos from "./components/PageMisTorneos";
 
 
+const clientID = "358047457499-q5lpase27pnng391bn08ssvcajob165q.apps.googleusercontent.com";
+
 function App() {
+
+  useEffect(() => {
+    function iniciar() {
+      gapi.client.init({
+        clientID:clientID,
+        scope: ""
+      })
+    }
+    gapi.load('client:auth2', iniciar)
+  })
+
   return (
     <div className="App">
       <Router>
         <BarraNav />
         <Routes>
-          <Route path="/" exact Component={PaginaInicio}></Route>
+          <Route path="/" exact Component={PaginaLogin}></Route>
           <Route path="/pageInicio" Component={PaginaInicio}></Route>
           <Route path="/pageTorneos" Component={PaginaTorneos}></Route>
           <Route path="/pagePartidos" Component={PaginaPartidos}></Route>

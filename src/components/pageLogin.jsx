@@ -1,18 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import { VideoFondo } from "./fondo";
+import { GoogleLogin } from "@react-oauth/google";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { useNavigate } from "react-router-dom";
+
+
+const clientID =
+  "358047457499-q5lpase27pnng391bn08ssvcajob165q.apps.googleusercontent.com";
 
 const PaginaLogin = () => {
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const navigate = useNavigate();
+
+
+  const handleSuccess = (credentialResponse) => {
+    console.log(credentialResponse, "Inicio de sesión exitoso");
+    setSuccessMessage("Inicio de sesión exitoso");
+    navigate('/pageInicio');
+  };
+
+  const handleError = () => {
+    setErrorMessage("Error: El inicio de sesión falló");
+  };
+
   return (
     <>
-      <VideoFondo/>
+      <VideoFondo />
       <Container>
         <Row>
           <Col></Col>
-          <Col xs={6} >
+          <Col xs={5}>
             <div className="formLogin bgLogin">
               <fieldset>
                 <img
@@ -21,34 +42,21 @@ const PaginaLogin = () => {
                   height={150}
                   className="imgLogin"
                 />
-                <div className="input-group flex-nowrap inputLogin">
-                  <span className="input-group-text">Correo Electrónico: </span>
-                  <input
-                    type="email"
-                    id=""
-                    className="form-control"
-                    placeholder="ejemplo@gmail.com"
-                  />
-                </div>
-                <div className="input-group flex-nowrap inputLogin">
-                  <span className="input-group-text">Contraseña: </span>
-                  <input type="password" id="" className="form-control" />
-                </div>
-                <div className="botones">
-                  <Button variant="info" className="btnLogin">
-                    <img
-                      src="/img/google.png"
-                      width={20}
-                      height={20}
-                      className="imgBtn"
+                <div id="signInButton" className="btnLogin">
+                  <GoogleOAuthProvider clientId={clientID}>
+                    <GoogleLogin
+                      onSuccess={handleSuccess}
+                      onError={handleError}
                     />
-                    Registrarse con Google
-                  </Button>
-                  <Button variant="primary" className="btnLogin">
-                    Ingresar
-                  </Button>
+                  </GoogleOAuthProvider>
                 </div>
               </fieldset>
+              {successMessage && (
+                <div className="text-center">{successMessage}</div>
+              )}
+              {errorMessage && (
+                <div className="text-center text-danger">{errorMessage}</div>
+              )}
             </div>
           </Col>
           <Col></Col>
@@ -57,4 +65,5 @@ const PaginaLogin = () => {
     </>
   );
 };
+
 export default PaginaLogin;

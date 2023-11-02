@@ -53,6 +53,12 @@ Antes de iniciar la aplicación, ejecuta esta comando para instalar la dependenc
 Inicia la aplicacion de forma local, abre una consola de Windows o en Visual Studio Code y ubicate en la carpeta del Proyecto\
 Abre [http://localhost:3000](http://localhost:3000) para verla en tu navegador.
 
+## Comandos para Iniciar la API
+
+### `node server.js`
+
+Localizate en la carpeta del proyecto y entre a al carpeta de "api-quinielas" y abre una terminal ahí. Ejecuta el comando y espera a la respuesta de la consola confirmando que la api ya esta en funcionamineto.
+
 ## Link de Trello
 [Aquí](https://trello.com/b/m6nS12zk/proyecto)
 

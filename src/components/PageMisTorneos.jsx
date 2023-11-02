@@ -74,13 +74,11 @@ const PageMisTorneos = () => {
       });
     });
 
-    // Realiza una solicitud POST a la API para guardar las predicciones
     axios
       .post("http://localhost:5000/api/registrar-prediccion", prediccionesParaEnviar)
       .then((response) => {
         if (response.status === 201) {
           console.log("Predicciones guardadas correctamente en la API");
-          // Puedes agregar aquí lógica adicional si es necesario
         } else {
           console.error("Error al guardar las predicciones en la API");
         }

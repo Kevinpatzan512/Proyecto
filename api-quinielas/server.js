@@ -8,7 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const torneos = [];
-const predicciones = []; // Nuevo arreglo para almacenar las predicciones
+const predicciones = [];
 
 app.post("/api/registrar-torneo", (req, res) => {
   const torneo = req.body;
