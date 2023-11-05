@@ -48,15 +48,13 @@ Repositorio de GitHub de React JS [Create React App](https://github.com/facebook
 
 ### `npm i react-scripts --force`
 
+Antes de iniciar la aplicación, ejecuta esta comando para instalar la dependencia de react "react-scripts" la cual es necesaria para poder iniciar app, ya que sin ella no puede ser iniciada.
+
 ### `npm i gapi-script --force`
 
 ### `npm i axios --force`
 
 ### `npm i @react-oauth/google --force`
-
-### `npm install react-scripts --save`
-
-Antes de iniciar la aplicación, ejecuta esta comando para instalar la dependencia de react "react-scripts" la cual es necesaria para poder iniciar app, ya que sin ella no puede ser iniciada.
 
 ### `npm start`
 
