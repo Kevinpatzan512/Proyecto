@@ -6,8 +6,10 @@ import PartidosNBA from "./partidosNBA";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Link } from "react-router-dom";
-
-
+import PartidosLigaArg from "./partidosLigaArg";
+import PartidosLigue1 from "./partidosLigue1";
+import PartidosBundesliga from "./partidosBundesliga";
+import PartidosLigaES from "./partidosLigaES";
 
 const PaginaPartidos = () => {
   return (
@@ -44,6 +46,42 @@ const PaginaPartidos = () => {
             <PartidosNBA />
             <div className="botones">
                 <Link className="btn btn-primary" to="/predicNBA">Predice Ya</Link>
+                </div>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+      <CardGroup>
+        <Card>
+          <Card.Body>
+            <PartidosLigaArg />
+            <div className="botones">
+                <Link className="btn btn-primary" to="/predicLigaArg">Predice Ya</Link>
+                </div>
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Body>
+            <PartidosLigue1 />
+            <div className="botones">
+                <Link className="btn btn-primary" to="/predicLigue1">Predice Ya</Link>
+                </div>
+          </Card.Body>
+        </Card>
+      </CardGroup>
+      <CardGroup>
+        <Card>
+          <Card.Body>
+            <PartidosBundesliga />
+            <div className="botones">
+                <Link className="btn btn-primary" to="/predicBundesliga">Predice Ya</Link>
+                </div>
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Body>
+            <PartidosLigaES />
+            <div className="botones">
+                <Link className="btn btn-primary" to="/predicLigaES">Predice Ya</Link>
                 </div>
           </Card.Body>
         </Card>

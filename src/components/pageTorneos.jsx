@@ -1,12 +1,12 @@
 import React from "react";
-import { CardsTorneos } from "./torneos";
+import { CardsTorneos } from "./torneosPrinc";
 import "./index.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import PaginaRegistrarTorneos from "./pageRegistrarTorneos";
+import { CardsTorneosEx } from "./torneosExtra";
 
 const PaginaTorneos = () => {
   return (
@@ -27,7 +27,7 @@ const PaginaTorneos = () => {
           </p>
         </Col>
         <Col></Col>
-        <CardsTorneos />
+        <CardsTorneosEx />
       </Row>
       <Row>
         <Col></Col>

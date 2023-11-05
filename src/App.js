@@ -19,6 +19,12 @@ import PredicLaliga from "./components/predicLaliga";
 import PredicSeriea from "./components/predicSeriea";
 import PredicNBA from "./components/predicNBA";
 import PageMisTorneos from "./components/PageMisTorneos";
+import PredicLigaArg from "./components/predicLigaArg";
+import PredicLigue1 from "./components/predicLigue1";
+import PredicBundesliga from "./components/predicBundesliga";
+import PredicLigaES from "./components/predicLigaES";
+
+
 
 
 const clientID = "358047457499-q5lpase27pnng391bn08ssvcajob165q.apps.googleusercontent.com";
@@ -58,7 +64,12 @@ function App() {
           <Route path="/predicLaliga" Component={PredicLaliga}></Route>
           <Route path="/predicSeriea" Component={PredicSeriea}></Route>
           <Route path="/predicNBA" Component={PredicNBA}></Route>
+          <Route path="/predicLigaArg" Component={PredicLigaArg}></Route>
+          <Route path="/predicLigue1" Component={PredicLigue1}></Route>
+          <Route path="/predicBundesliga" Component={PredicBundesliga}></Route>
+          <Route path="/predicLigaES" Component={PredicLigaES}></Route>
         </Routes>
+        
         <Routes>
           <Route path="/pageDevs" Component={PaginaDev}></Route>
         </Routes>

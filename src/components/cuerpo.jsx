@@ -26,7 +26,7 @@ export const Cuerpo = () => {
               Ver Partidos
             </Link>
           </div>
-          <h1 className="cuerpoTitle">Torneos</h1>
+          <h1 className="cuerpoTitle">Torneos Principales</h1>
           <p className="textoBienvenido"> La Premier League, La Liga, la Serie A italiana y la NBA son algunas de las ligas deportivas más destacadas del mundo. Cada una de ellas representa la cima de su respectivo deporte, atrayendo a talentos de élite y millones de aficionados en todo el planeta. Estas competiciones encarnan la emoción, la destreza y la competitividad en su máxima expresión. Predice ya los resultados jornada con nosotros. </p>
         </Col>
         <Col></Col>

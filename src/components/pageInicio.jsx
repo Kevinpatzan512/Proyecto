@@ -1,6 +1,6 @@
 import React from 'react'
 import {Cuerpo} from './cuerpo'
-import {CardsTorneos} from './torneos'
+import {CardsTorneos} from './torneosPrinc'
 import {VideoFondo} from './fondo'
 
 const PaginaInicio = () => {

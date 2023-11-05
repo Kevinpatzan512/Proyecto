@@ -44,6 +44,16 @@ Repositorio de GitHub de React JS [Create React App](https://github.com/facebook
 
 ## Comandos para la app
 
+### Librerías para la app
+
+### `npm i react-scripts --force`
+
+### `npm i gapi-script --force`
+
+### `npm i axios --force`
+
+### `npm i @react-oauth/google --force`
+
 ### `npm install react-scripts --save`
 
 Antes de iniciar la aplicación, ejecuta esta comando para instalar la dependencia de react "react-scripts" la cual es necesaria para poder iniciar app, ya que sin ella no puede ser iniciada.
@@ -67,3 +77,10 @@ Localizate en la carpeta del proyecto y entre a al carpeta de "api-quinielas" y 
 
 ## Link del Documento PDF
 [Aquí](https://www.figma.com/file/jfXUSAomlXpaXk9lqd8ZjS/Proyecto-DAW?type=design&node-id=0%3A1&mode=design&t=uCGH9m8EUwyOE06Q-1)
+
+## Link del Manual de Usuario
+[Aquí](https://www.canva.com/design/DAFzOELgeS8/SQBfC3gD2sNv_2AJs1ZtkA/edit?utm_content=DAFzOELgeS8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+## Link del Manual Técnico
+[Aquí](https://www.canva.com/design/DAFzO-bBMvY/jSpIWU7OScHwZjFl3lKypQ/edit?utm_content=DAFzO-bBMvY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
